@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickLink - URL Shortener</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">
+                <span>🔗</span>
+                QuickLink
+            </div>
+
+            <p>Fast & Simple URL Shortener</p>
+        </header>
+
+        <main>
+
+            <section class="hero">
+                <h1>Shorten Your URL</h1>
+
+                <p>
+                    Turn long URLs into short, easy-to-share links.
+                </p>
+
+                <form id="urlForm">
+
+                    <div class="input-group">
+                        <input
+                            type="url"
+                            id="urlInput"
+                            placeholder="https://example.com/your-long-url"
+                            required
+                        >
+
+                        <button type="submit" id="shortenBtn">
+                            Shorten URL
+                        </button>
+                    </div>
+
+                    <p id="errorMessage" class="error"></p>
+
+                </form>
+
+                <div id="resultBox" class="result-box hidden">
+
+                    <h3>Your shortened URL</h3>
+
+                    <div class="result-row">
+
+                        <input
+                            type="text"
+                            id="shortUrl"
+                            readonly
+                        >
+
+                        <button id="copyBtn">
+                            📋 Copy
+                        </button>
+
+                    </div>
+
+                    <a
+                        id="openLink"
+                        href="#"
+                        target="_blank"
+                    >
+                        Open Link ↗
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section class="history-section">
+
+                <div class="history-header">
+                    <h2>Recent Links</h2>
+
+                    <button id="clearHistory">
+                        Clear History
+                    </button>
+                </div>
+
+                <div id="historyList">
+
+                    <div class="empty-history">
+                        <span>🕘</span>
+                        <p>No shortened links yet.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>
+                Built with HTML5 • CSS3 • JavaScript • Fetch API
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
